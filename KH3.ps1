@@ -15,13 +15,13 @@
 # Get this by asking the EGL to make a desktop shortcut for your app
 # opening the properties of the shortcut and looking at the 
 # 'Web Document' tab, URL field (copy/paste the ENTIRE string)
-$epic_app_launch_uri='com.epicgames.launcher://apps/68c214c58f694ae88c2dab6f209b43e4?action=launch&silent=true'
+$epic_app_launch_uri='com.epicgames.launcher://apps/0712176b5e3e49bfa8866c0ee1359f2d%3Ae345fdb9186645a48d30c3f85a8951dc%3Afd711544a06543e0ab1b0808de334120?action=launch&silent=true'
 
 # APP Name as seen by windows
 # The name of the application (when launched)
 # Get this from TaskManger or get-process
 # It's probably also the name you see on the EGL desktop shortcut
-$epic_app='KINGDOM HEARTS HD 1.5+2.5 ReMIX'
+$epic_app='KINGDOM HEARTS III + Re Mind'
 
 # Epic Launcher name
 # This should be universal
@@ -51,7 +51,6 @@ Function _launch_game {
     Stop-Process -Name $epic_launcher
     # Leave that all on the screen for at least a second
     Start-Sleep -Seconds 1
-    
 }
 
 _launch_game

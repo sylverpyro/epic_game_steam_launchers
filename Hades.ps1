@@ -6,22 +6,14 @@
 #    * Set Launch Options to '~\git\epic_game_steam_launchers\GAME.ps1' (Replace GAME with this launcher's name)
 #    * OPTIONAL: Replace the image (huge pain)
 
-# How to create a new launcher:
-# 1. Open the EGL and make a desktop shotcut of the game you want to use
-# 2. Update the 'epic_app_launch_uri' string (see below)
-# 3. Update the 'epic_app' string
-
-# APP URI
-# Get this by asking the EGL to make a desktop shortcut for your app
-# opening the properties of the shortcut and looking at the 
-# 'Web Document' tab, URL field (copy/paste the ENTIRE string)
-$epic_app_launch_uri='com.epicgames.launcher://apps/68c214c58f694ae88c2dab6f209b43e4?action=launch&silent=true'
-
-# APP Name as seen by windows
 # The name of the application (when launched)
 # Get this from TaskManger or get-process
-# It's probably also the name you see on the EGL desktop shortcut
-$epic_app='KINGDOM HEARTS HD 1.5+2.5 ReMIX'
+$epic_app='Hades'
+
+# APP UIR
+# Get this by asking the EGL to make a desktop shortcut for your app
+# opening the properties of the shortcut and looking at the string
+$epic_app_launch_uri='com.epicgames.launcher://apps/min%3Afb39bac8278a4126989f0fe12e7353af%3AMin?action=launch&silent=true'
 
 # Epic Launcher name
 # This should be universal
@@ -51,7 +43,6 @@ Function _launch_game {
     Stop-Process -Name $epic_launcher
     # Leave that all on the screen for at least a second
     Start-Sleep -Seconds 1
-    
 }
 
 _launch_game
